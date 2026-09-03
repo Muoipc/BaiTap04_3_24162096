@@ -4,7 +4,7 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
-    <display-name>BaiTap01 JPA Category CRUD</display-name>
+    <display-name>BaiTap04_3_24162096</display-name>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

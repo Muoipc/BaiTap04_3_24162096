@@ -7,6 +7,12 @@
 <title>Danh sách Category</title>
 </head>
 <body>
+	<p>
+		Xin chào, <b><c:out value="${sessionScope.account.fullname != null ? sessionScope.account.fullname : sessionScope.account.username}" /></b> | 
+		<a href="<c:url value='/profile'/>"><button type="button">Chỉnh sửa Profile</button></a> | 
+		<a href="<c:url value='/logout'/>">[Đăng xuất]</a>
+	</p>
+
 	<a href="<c:url value="/admin/category/add"/>">Add Category</a>
 	<br>
 	<hr>

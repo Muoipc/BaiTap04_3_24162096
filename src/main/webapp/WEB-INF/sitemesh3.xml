@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+    <!-- Loại trừ chính thư mục decorators để tránh đệ quy -->
+    <mapping path="/decorators/*" exclude="true"/>
+    <mapping path="/image*" exclude="true"/>
+    <mapping path="/login*" exclude="true"/>
+    <mapping path="/logout*" exclude="true"/>
+
+    <!-- Áp dụng Decorator Layout -->
+    <mapping path="/admin/*" decorator="/decorators/admin.jsp"/>
+    <mapping path="/profile*" decorator="/decorators/web.jsp"/>
+    <mapping path="/user/*" decorator="/decorators/web.jsp"/>
+</sitemesh>

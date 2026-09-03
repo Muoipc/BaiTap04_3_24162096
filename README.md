@@ -1,8 +1,8 @@
-# BaiTap01_JPA_CategoryCRUD
+# BaiTap04_3_24162096
 
-Bài tập 01 (24/08/2026) - Lập trình Web (Nhóm 12 CT2_CT5_A210, HCMUTE)
+Bài tập 04_3 - Lập trình Web (HCMUTE) - MSSV: 24162096
 
-CRUD Category sử dụng **JPA (Hibernate)** với **Jakarta EE / Servlet 6.0** (Tomcat 11).
+CRUD Category và User Profile sử dụng **JPA (Hibernate)** với **Jakarta EE / Servlet 6.0** (Tomcat 11).
 
 ## Công nghệ
 - Java 17
