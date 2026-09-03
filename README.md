@@ -1,13 +1,4 @@
 # BaiTap04_3_24162096
-
-**Trường Đại học Sư phạm Kỹ thuật TP.HCM (HCMUTE)**  
-**Môn học:** Lập trình Web  
-**Sinh viên thực hiện:** Nguyễn Song Hoàng Phúc  
-**Mã số sinh viên (MSSV):** 24162096  
-**Thời gian hoàn thành:** Trước 17:30 ngày 03/09/2026  
-
----
-
 ## Đề tài bài tập
 > **Yêu cầu:** Xây dựng chức năng profile của User để update: `fullname`, `phone`, `images` (có sử dụng upload file bằng multipart) bằng **JPA** với quản lý giao diện là **SiteMesh**.
 
@@ -39,7 +30,7 @@
 - **DAO & Service:**
   - `IUserDao` / `UserDaoImpl`: Thực hiện `findById` và `update(User user)` qua `EntityManager.merge(user)`.
   - `IUserService` / `UserServiceImpl`: Tầng nghiệp vụ xử lý logic tài khoản.
-- **Controller `ProfileController.java` (`/profile`):**
+- **Controller `ProfileController.java` (`/profile`):            
   - Khai báo `@MultipartConfig(fileSizeThreshold = 2MB, maxFileSize = 10MB)`.
   - **`doGet`:** Lấy thông tin user từ Session, truy vấn dữ liệu mới nhất bằng JPA và chuyển tiếp hiển thị lên view.
   - **`doPost`:** Đọc dữ liệu `fullname`, `phone`, nhận file upload `imageFile` qua `req.getPart()`, lưu file ảnh vào thư mục upload và cập nhật tên file vào JPA.
@@ -115,6 +106,3 @@ catalina start
 
 ---
 
-## 5. Nộp bài
-- **GitHub Repository:** [https://github.com/Muoipc/BaiTap04_3_24162096](https://github.com/Muoipc/BaiTap04_3_24162096)
-- **Hệ thống nộp:** UTExLMS
