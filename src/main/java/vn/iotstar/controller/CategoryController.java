@@ -35,18 +35,19 @@ public class CategoryController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        resp.setContentType("text/html;charset=UTF-8");
         String url = req.getRequestURI();
         if (url.contains("/admin/categories")) {
             List<Category> list = cateService.findAll();
             req.setAttribute("listcate", list);
-            req.getRequestDispatcher("/views/admin/category-list.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/admin/category-list.jsp").include(req, resp);
         } else if (url.contains("/admin/category/add")) {
-            req.getRequestDispatcher("/views/admin/category-add.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/admin/category-add.jsp").include(req, resp);
         } else if (url.contains("/admin/category/edit")) {
             int id = Integer.parseInt(req.getParameter("id"));
             Category category = cateService.findById(id);
             req.setAttribute("cate", category);
-            req.getRequestDispatcher("/views/admin/category-edit.jsp").forward(req, resp);
+            req.getRequestDispatcher("/views/admin/category-edit.jsp").include(req, resp);
         } else {
             int id = Integer.parseInt(req.getParameter("id"));
             try {

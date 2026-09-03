@@ -39,8 +39,9 @@ public class ProfileController extends HttpServlet {
 
         User sessionUser = (User) session.getAttribute("account");
         User user = userService.findById(sessionUser.getId());
+        resp.setContentType("text/html;charset=UTF-8");
         req.setAttribute("user", user);
-        req.getRequestDispatcher("/views/profile.jsp").forward(req, resp);
+        req.getRequestDispatcher("/views/profile.jsp").include(req, resp);
     }
 
     @Override
@@ -93,8 +94,9 @@ public class ProfileController extends HttpServlet {
         // Cập nhật lại session để hiển thị tên mới nhất trên giao diện
         session.setAttribute("account", user);
 
+        resp.setContentType("text/html;charset=UTF-8");
         req.setAttribute("user", user);
         req.setAttribute("message", "Cập nhật hồ sơ thành công!");
-        req.getRequestDispatcher("/views/profile.jsp").forward(req, resp);
+        req.getRequestDispatcher("/views/profile.jsp").include(req, resp);
     }
 }

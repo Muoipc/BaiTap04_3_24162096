@@ -6,6 +6,16 @@
 
     <display-name>BaiTap04_3_24162096</display-name>
 
+    <!-- Cấu hình Filter SiteMesh 3 quản lý giao diện Layout -->
+    <filter>
+        <filter-name>sitemesh</filter-name>
+        <filter-class>vn.iotstar.filter.MySiteMeshFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>sitemesh</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
